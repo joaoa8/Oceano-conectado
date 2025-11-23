@@ -1,0 +1,254 @@
+/* --- CARROSSEL --- */
+.carousel {
+    position: relative;
+    border-bottom: 5px solid #1eb4be;
+}
+
+.bannerWindow {
+    overflow: hidden;
+    width: 100%;
+}
+
+.bannerList {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* 3 banners */
+}
+
+.banner {
+    width: 33.333%; /* 1/3 do container */
+    height: 60dvh; /* 60% da altura da tela */
+    min-height: 450px; /* Altura mínima */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 0 10%; /* Espaçamento interno */
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Imagens de fundo */
+#banner1 { background-image: url(../assets/fundo.jpeg); }
+#banner2 { background-image: url(../assets/fundo2.webp); }
+#banner3 { background-image: url(../assets/fundo3.jpg); }
+
+.banner h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+
+.banner h2 {
+    font-size: 1.5rem;
+}
+
+.banner p {
+    font-size: 1.1rem;
+}
+
+/* * BOA PRÁTICA: Estilo para o link <a> que parece botão.
+ * O estilo base (.btn) foi movido para o styleBase.css,
+ * mas podemos adicionar especificidade se necessário.
+*/
+.btn {
+    background-color: #00B4D8;
+    border: 0;
+    border-radius: 10px;
+    width: 140px;
+    height: 45px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 1px 5px 5px #00000075;
+    
+    /* Adicionado para estilizar o <a> */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background-color: #013A63;
+    transform: scale(1.05);
+}
+
+/* * BOA PRÁTICA (CORRIGIDO):
+ * Estilos aplicados *diretamente* aos IDs,
+ * removendo o seletor global terrível de 'button'.
+*/
+#nextBtn, #prevBtn {
+    background-color: #ffffff00;
+    border: 0;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #00B4D880;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s;
+    z-index: 10;
+    padding: 10px; /* Aumenta área de clique */
+    
+    /* Reseta o tamanho fixo que estava sendo aplicado */
+    width: auto;
+    height: auto;
+}
+
+#nextBtn { right: 15px; }
+#prevBtn { left: 15px; }
+
+#nextBtn:hover, #prevBtn:hover {
+    color: #00B4D8;
+}
+
+/* --- SEÇÃO DE CONTEÚDO (Sobre Nós) --- */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 5%;
+    gap: 20px;
+}
+
+/* * BOA PRÁTICA: Substitui o <hr> 
+ * Adiciona uma borda na primeira seção de conteúdo.
+*/
+.content:first-of-type {
+    border-top: 1px solid #2a3a63;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #00B4D8;
+}
+
+/* * BOA PRÁTICA (CORRIGIDO):
+ * .text agora é 100% em telas pequenas e limitado
+ * em telas grandes (max-width) para legibilidade.
+*/
+.text {
+    width: 100%;
+    max-width: 800px; /* Limite de largura para leitura */
+}
+
+.content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content img{
+    float: left;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+#img1{
+    width: 20%;
+}
+
+#img2{
+    width: 30%;
+}
+.content p {
+    font-size: 1rem;
+    text-align: justify; /* Melhora leitura de blocos de texto */
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.card img{
+    margin-bottom: 5px;
+}
+
+h3{
+    margin: 0px;
+}
+
+.video{
+    text-align: center;
+}
+
+.video iframe{
+    margin: 10vh;
+    border-radius: 10px;
+    height: 315px;
+    width: 560px;
+    
+    box-shadow: 0px 0px 20px #005f8a;
+}
+
+
+/* --- MODO CLARO (Específico da Index) --- */
+
+body.light-mode .carousel {
+    border-bottom-color: #a0d2eb;
+}
+
+body.light-mode .content:first-of-type {
+    border-top-color: #dee2e6;
+}
+
+body.light-mode .btn:hover {
+    /* Ajuste de hover para o modo claro, se necessário */
+    background-color: #005f8a;
+}
+
+
+/* --- MEDIA QUERIES (Específicos da Index) --- */
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 0 8%;
+        text-align: center;
+        align-items: center; /* Centraliza o botão */
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner h2 {
+        font-size: 1.2rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+    }
+
+    #nextBtn, #prevBtn {
+        font-size: 2rem; /* Diminui setas no mobile */
+    }
+    
+    .video iframe{
+    margin: 0px 0px 10vh 0vh;
+    width: auto;
+    }
+
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        width: 100%; /* Garante 100% no mobile */
+    }
+
+    #img1{
+        width: 40%;
+    }
+
+    #img2{
+        width: 50%;
+    }
+}

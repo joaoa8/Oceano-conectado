@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boias Meteoceanográficas</title>
+    <link rel="stylesheet" href="../css/styleBase.css">
+    <link rel="stylesheet" href="../css/styleTec.css">
+    <link rel="shortcut icon" href="../assets/logo.png">
+</head>
+
+<body>
+    <header>
+        <a href="tecnologias.html">
+            <img src="../assets/voltar.png" alt="Voltar">
+        </a>
+    </header>
+    <main>
+        <div class="header">
+            <h1>
+                Boias Meteoceanográficas
+            </h1>
+            <img src="../assets/boiaBanner.jpeg">
+        </div>
+
+        <div class="content">
+            <div class="info">
+                <div class="info-header">
+                    <img src="../assets/boia.png" alt="">
+                    <h2>O que são</h2>
+                </div>
+                <p>
+                    Dispositivos flutuantes, fixos ou móveis, equipados com sensores para monitorar em tempo real as
+                    condições meteorológicas e oceanográficas do mar. <br>
+                    Algumas versões modernas também incluem câmeras para observação visual da superfície ou submersa.
+                </p>
+            </div>
+            <div class="info">
+                <div class="info-header">
+                    <img src="../assets/tecnologia.png" alt="">
+
+                    <h2>Principais tipos</h2>
+                </div>
+                <p>
+                    <strong>Boias de fundeio:</strong> Fixas, ancoradas ao fundo do mar. Monitoram um ponto específico. <br>
+                    <strong>Boias de deriva:</strong> Móveis, seguem as correntes oceânicas. <br>
+                    <strong>Boias com câmera:</strong> Equipadas com câmeras para imagens da superfície ou submersas.
+                </p>
+            </div>
+            <div class="info">
+                <div class="info-header">
+                    <img src="../assets/protecaoAmbiental.png" alt="">
+                    <h2>Função ambiental</h2>
+                </div>
+                <p>
+                    Monitoramento contínuo de variáveis como temperatura e salinidade <br>
+                    Observação de impactos ambientais, como derramamentos de óleo, proliferação de algas ou lixo
+                    marinho. <br>
+                    Registro visual de mudanças ambientais e comportamento da fauna.
+                </p>
+            </div>
+            <div class="info">
+                <div class="info-header">
+                    <img src="../assets/tecnologiaFuncao.png" alt="">
+                    <h2>Principais aplicações</h2>
+                </div>
+                <p>
+                    Segurança da navegação e apoio à Marinha e embarcações. <br>
+                    Pesquisa científica em oceanografia, meteorologia e mudanças climáticas. <br>
+                    Monitoramento ambiental costeiro e oceânico. <br>
+                    Apoio à indústria offshore (petróleo, gás, energia eólica). <br>
+                    Aquicultura e pesca sustentável. <br>
+                </p>
+            </div>
+            <div class="info">
+                <div class="info-header">
+                    <img src="../assets/circuito.png" alt="">
+                    <h2>Casos de uso</h2>
+                </div>
+                <p>
+                    <strong>PNBOIA (Brasil):</strong> Rede de boias da Marinha do Brasil para monitoramento do Atlântico Sul.  <br>
+                    <strong>Boias Spotter (Sofar Ocean):</strong> Pequenas, com energia solar, usadas globalmente para dados de ondas e vento. <br>
+                    <strong>Monitoramento de derramamento de óleo:</strong> Boias com sensores e câmeras para detectar manchas e orientar ações de contenção. <br>
+                    <strong>Estudos de ressurgência e plâncton:</strong> Boias com sensores de clorofila e câmeras subaquáticas. <br>
+                    <strong>Portos e terminais marítimos:</strong> Boias fixas com câmeras para monitorar condições em tempo real e garantir segurança operacional. <br>
+                </p>
+            </div>
+        </div>
+
+        <img src="" alt="">
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footerCard">
+                <img src="../assets/IF.png" alt="Logo Instituição">
+                <h1>Informações</h1>
+                <ul>
+                    <li><strong>Desenvolvido por:</strong> João Victor</li>
+                    <li><strong>Idealização e Suporte geral:</strong> Helder Filho</li>
+                    <li><strong>Idealização e Design:</strong> Thalysson</li>
+                    <li><strong>Professores Orientadores:</strong> Luciano Alves, Hiran Nonato, Alessandro de Castro e
+                        Priscyla Kelly</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Oceano Conectado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div class="mode">
+        <button class="btnMode"><img src="../assets/mode.png"></button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- CÓDIGO DO TEMA CLARO/ESCURO (Corrigido e integrado) ---
+            const btnMode = document.querySelector('.btnMode');
+            const body = document.body;
+
+            btnMode.addEventListener('click', () => {
+                // A mágica acontece aqui: Adiciona 'light-mode' se não tiver, e remove se tiver.
+                body.classList.toggle('light-mode');
+            });
+
+        });  
+    </script>
+</body>
+
+</html>

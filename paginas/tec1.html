@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drones Subaquáticos</title>
+    <link rel="stylesheet" href="../css/styleBase.css">
+    <link rel="stylesheet" href="../css/styleTec.css">
+    <link rel="shortcut icon" href="../assets/logo.png">
+</head>
+
+<body>
+    <header>
+        <a href="tecnologias.html">
+            <img src="../assets/voltar.png" alt="Voltar">
+        </a>
+    </header>
+    <main>
+        <div class="header">
+            <h1>
+                Drones Subaquáticos (AUVs)
+            </h1>
+            <img src="../assets/droneBanner.webp">
+        </div>
+
+        <div class="content">
+            <div class="info">
+                <div class="info-header">
+                <img src="../assets/drone.png" alt="">
+                <h2>O que são</h2>
+                </div>
+                <p>
+                    Veículos autônomos que operam debaixo d’água sem controle humano direto.<br>
+                    Usados para monitorar recifes, coletar dados ambientais e proteger áreas marinhas.
+                </p>
+            </div>
+            <div class="info">
+                <div class="info-header">
+                <img src="../assets/tecnologia.png" alt="">
+                
+                <h2>Principais tipos</h2>
+                </div>
+                <p>
+                    <strong>Gliders:</strong> lentos, mas com grande autonomia.<br>
+                   <strong>AUVs tipo torpedo:</strong> rápidos e motorizados.<br>
+                   <strong>Robôs especializados:</strong> acessam áreas complexas (ex.: Eelume).<br>
+                   <strong>Veículos de longa duração:</strong> realizam missões profundas e prolongadas.<br>
+                </p>
+            </div>
+            <div class="info">
+                <div class="info-header">
+                <img src="../assets/protecaoAmbiental.png" alt="">
+                <h2>Função ambiental</h2>
+                </div>
+                <p>
+                    Produzem dados constantes e detalhados do ambiente subaquático.<br>
+                    Ajudam cientistas e autoridades a entender, preservar e fiscalizar ecossistemas.<br>
+                </p>
+            </div>
+            <div class="info">
+                <div class="info-header">
+                <img src="../assets/tecnologiaFuncao.png" alt="">
+                <h2>Principais aplicações</h2>
+                </div>
+                <p>
+                    <strong>Mapeamento:</strong> criam mapas 3D e monitoram recifes e habitats.<br>
+                    <strong>Qualidade da água:</strong> medem temperatura, pH, oxigênio, turbidez e poluentes.<br>
+                    <strong>Biodiversidade:</strong> identificam espécies, acompanham comportamento e invasores.<br>
+                    <strong>Combate à poluição:</strong> detectam óleo, plástico, redes fantasmas e vazamentos.<br>
+                    <strong>Fiscalização:</strong> verificam pesca ilegal e ajudam em proteção ambiental.<br>
+                </p>
+            </div>
+            <div class="info">
+                <div class="info-header">
+                <img src="../assets/circuito.png" alt="">
+                <h2>Casos de uso</h2>
+                </div>
+                <p>
+                    <strong>Noruega (Blueye):</strong> pesquisa em águas frias e no Ártico.<br>
+                    <strong>Austrália (Hydrus):</strong> estudo da Grande Barreira de Corais.<br>
+                    <strong>Holanda (Ocean Cleanup):</strong> mapeamento de lixo oceânico.<br>
+                    <strong>Chipre:</strong> monitoramento de recifes artificiais impressos em 3D.<br>
+                </p>
+            </div>
+        </div>
+
+        <img src="" alt="">
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footerCard">
+                <img src="../assets/IF.png" alt="Logo Instituição">
+                <h1>Informações</h1>
+                <ul>
+                    <li><strong>Desenvolvido por:</strong> João Victor</li>
+                    <li><strong>Idealização e Suporte geral:</strong> Helder Filho</li>
+                    <li><strong>Idealização e Design:</strong> Thalysson</li>
+                    <li><strong>Professores Orientadores:</strong> Luciano Alves, Hiran Nonato, Alessandro de Castro e
+                        Priscyla Kelly</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Oceano Conectado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div class="mode">
+        <button class="btnMode"><img src="../assets/mode.png"></button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- CÓDIGO DO TEMA CLARO/ESCURO (Corrigido e integrado) ---
+            const btnMode = document.querySelector('.btnMode');
+            const body = document.body;
+
+            btnMode.addEventListener('click', () => {
+                // A mágica acontece aqui: Adiciona 'light-mode' se não tiver, e remove se tiver.
+                body.classList.toggle('light-mode');
+            });
+
+        });  
+    </script>
+</body>
+
+</html>

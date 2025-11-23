@@ -1,0 +1,221 @@
+body{
+    text-align: center;
+}
+
+.bodyLock{
+    overflow: hidden;
+}
+.header-galeria {
+    background: linear-gradient(#00425A, #0A0F1C);
+    text-align: center;
+    padding: 70px 5%; /* Padding lateral responsivo */
+}
+
+.header-galeria h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.header-galeria p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.subP {
+    font-style: italic;
+    font-size: 14px;
+    margin-top: -5px;
+    color: #00B4D8;
+}
+
+hr {
+    height: 1px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* --- Grid de Imagens --- */
+.imagens {
+    display: flex;
+    flex-wrap: wrap; /* Perfeito para responsividade */
+    justify-content: center;
+    margin-top: 50px; /* Reduzido de 100px */
+    padding: 0 5%;
+    gap: 35px; /* Espaçamento entre os itens */
+    margin-bottom: 15vh;
+}
+
+.imagem button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #E5E5E5;
+    transition: transform 0.5s ease;
+}
+
+.imagem button:hover {
+    transform: scale(1.05); /* Efeito de zoom mais sutil */
+}
+
+.imagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin removido, .gap cuida disso */
+}
+
+.imagem img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    box-shadow: 2px 4px 10px #00000075;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.imagem button:hover img,
+.imagem button:focus img {
+    filter: grayscale(0%);
+}
+
+.imagem h1 {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+/* --- Painel/Modal --- */
+.panel {
+    display: none;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estado Ativo do Modal (via JS) */
+.panelOn {
+    display: flex;
+    animation: fadeIn 0.3s ease-in forwards;
+}
+
+/* * BOA PRÁTICA (CORRIGIDO):
+ * Conteúdo do modal agora é responsivo.
+ * Ocupa 90% no celular e no máximo 600px no desktop.
+ * Também é rolável (overflow-y) se o conteúdo for grande.
+*/
+.panelContent {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(360deg, #0A0F1C, #00425A);
+    text-align: center;
+    width: 90%; /* Fluido em telas pequenas */
+    max-width: 600px; /* Limitado em telas grandes */
+    max-height: 80vh; /* Altura máxima */
+    overflow-y: auto; /* Permite rolar se o texto for longo */
+    border-radius: 30px;
+     /* Mais padding */
+    position: relative;
+    color: #E5E5E5;
+}
+
+.background {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../assets/ondaPanel.png');
+    background-size: 18dvb;
+    padding: 20px 30px 30px;
+    backdrop-filter: blur(10px) saturate(150%);
+}
+
+.closeBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Posição absoluta *relativa* ao .panelContent */
+    top: 10px;
+    right: 20px;
+    font-size: 2.5rem; /* Reduzido de 50px */
+    color: #dfdfdf;
+    line-height: 1;
+}
+
+.panelContent h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.panelContent p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- MODO CLARO (Específico da Galeria) --- */
+
+body.light-mode .header-galeria {
+    background: linear-gradient(180deg, #cde8ff, #f8f9fa);
+}
+
+body.light-mode .imagem img {
+    filter: grayscale(0%); /* Imagens sempre coloridas no modo claro */
+}
+
+body.light-mode .imagem h1 {
+    color: #212529;
+}
+
+body.light-mode .panelContent {
+    background-color: #005f8a; /* Um azul um pouco mais escuro */
+    color: #ffffff; /* Texto branco para contraste */
+}
+
+body.light-mode .closeBtn {
+    color: #ffffff;
+}
+
+/* --- MEDIA QUERIES (Específicos da Galeria) --- */
+
+@media (max-width: 768px) {
+    /* * Em telas menores, o "hover" não existe,
+     * então deixamos as imagens coloridas por padrão.
+    */
+    .imagem img {
+        filter: grayscale(0%);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-galeria h1 {
+        font-size: 2.2rem;
+    }
+    .header-galeria p {
+        font-size: 1rem;
+    }
+    
+    .imagem img {
+        width: 200px; /* Imagens menores no celular */
+        height: 200px;
+    }
+    
+    .panelContent h2 {
+        font-size: 1.5rem;
+    }
+    .panelContent p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,406 @@
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+    }
+    to   { 
+        opacity: 1; 
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    background-color: #0A0F1C;
+    color: #E5E5E5;
+    /* Transição suave para o modo light/dark */
+    transition: background-color 0.3s ease, color 0.5s ease;
+}
+
+main {
+    padding-top: 14.8vh;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Removemos o sublinhado padrão de links dentro do logo */
+header a{
+    text-decoration: none;
+    color: inherit; /* Herda a cor do pai */
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #0A0F1C;
+    color: #ffffff;
+    padding: 20px 5%;
+    position: fixed;
+    z-index: 1000;
+    width: 100%; /* Corrigido de 90% para 100% */
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease, color 0.5s ease;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap; 
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* * BOA PRÁTICA (CORRIGIDO): 
+ * Tamanho fixo (px) para a logo. 
+ * Usar % (10% ou 20%) é ruim para responsividade.
+*/
+header .logo-title img {
+    width: 8dvw;
+    height: 10dvh;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Botão do Menu Hamburguer */
+.menu-toggler {
+    background-color: transparent;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    display: none; /* Exibido apenas em telas pequenas (ver @media) */
+    cursor: pointer;
+    padding: 0;
+    position: fixed;
+    top: 8.5dvw;
+    right: 3dvw;
+}
+
+.menu-toggler img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Navegação Desktop */
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 35px;
+}
+
+header li {
+    margin: 0;
+}
+
+header li a {
+    color: #E5E5E5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header li a:hover {
+    color: #00B4D8;
+}
+
+header .here {
+    color: #00B4D8;
+    text-decoration: overline;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Essencial para responsividade */
+    padding: 80px 5%;
+    gap: 50px;
+}
+
+.card {
+    width: 290px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 80px;
+}
+
+.card h3 {
+    color: #00B4D8;
+}
+
+.card p {
+    color: #c2c2c2;
+    font-size: 14px;
+    line-height: 1.5; /* Melhora legibilidade */
+    transition: color 0.3s ease;
+}
+
+.card a {
+    text-decoration: underline;
+    color: #00B4D8;
+    cursor: pointer;
+    transition: color 0.5s;
+    font-weight: bold; /* Damos mais destaque */
+}
+
+.card a:hover {
+    color: #013A63;
+}
+
+
+
+/* --- FOOTER (Componente Reutilizável) --- */
+footer {
+    background-color: #0d1833;
+    color: #E5E5E5;
+    padding: 40px 5% 0; /* 0 de padding-bottom pois o .footer-bottom terá */
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Alterado de .footer para .footer-content para melhor semântica */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 1%;
+    text-align: center;
+}
+
+.footerCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+}
+
+.footerCard img {
+    width: 70px;
+    height: 70px;
+}
+
+.footerCard ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2.5;
+    text-align: left; /* Fica mais alinhado */
+}
+
+.footer-bottom {
+    padding: 20px 5%;
+    border-top: 1px solid #1a2f5f; /* Divisão sutil */
+    margin-top: 20px;
+}
+
+/* --- BOTÃO MODO (light/dark) --- */
+.btnMode {
+    background-color: #005f8a;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btnMode img {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* ================================== */
+/* MODO CLARO (Light Mode)            */
+/* ================================== */
+
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.light-mode header {
+    background-color: #ffffff;
+}
+
+body.light-mode header h1,
+body.light-mode header li a {
+    color: #212529;
+}
+
+body.light-mode header li a:hover {
+    color: #0077b6; /* Azul mais forte para hover no claro */
+}
+
+body.light-mode .menu-toggler {
+    background-color: transparent;
+    /* (Se a imagem do menu for escura, ela funciona bem aqui) */
+}
+
+body.light-mode .card {
+    background-color: #ffffff;
+    color: #343a40;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .card p {
+    color: #6c757d;
+}
+
+body.light-mode .card a {
+    color: #0077b6;
+}
+
+body.light-mode .card a:hover {
+    color: #005f8a;
+}
+
+body.light-mode footer {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+body.light-mode .footer-bottom {
+    border-top-color: #ced4da;
+}
+
+body.light-mode .btnMode {
+    background-color: #48cae4;
+    border: 1px solid #dee2e6;
+}
+
+/* ================================== */
+/* MEDIA QUERIES (Responsivo)         */
+/* =l================================= */
+
+/* --- Tablets (ex: < 768px) --- */
+@media (max-width: 768px) {
+    main {
+    padding-top: 80px;
+    }
+
+    header .logo-title img {
+    width: 15dvw;
+    height: 10dvh;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    /* logo / toggler / nav ficam em ordem fixa (logo -> toggler -> nav) */
+    .logo-title { order: 1; }
+
+    .menu-toggler {
+        display: flex;
+        align-items: center;
+        position: static; /* antes era fixed — tira do fluxo e quebra a ordem */
+        width: 30px;
+        height: 30px;
+        order: 2;
+        margin-left: auto; /* opcional: mantém o toggler à direita */
+    }
+
+    header nav {
+        order: 3;
+        width: 100%;
+    }
+
+    /* nav ul fica em coluna quando aberta */
+    header nav ul {
+        display: none; /* permanece escondida até o JS adicionar a classe .navOn */
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    /* estado aberto via JS: .navOff.navOn */
+    .navOff.navOn {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        order: 3;
+    }
+
+    .navOff.navOn li {
+        opacity: 0;
+        animation: slideIn 0.5s ease-out forwards;
+        text-align: left;
+        padding: 6px 0;
+        line-height: 1px;
+    }
+
+    .navOff.navOn li:nth-child(1) { animation-delay: 0s; }
+    .navOff.navOn li:nth-child(2) { animation-delay: 0.1s; }
+    .navOff.navOn li:nth-child(3) { animation-delay: 0.2s; }
+    .navOff.navOn li:nth-child(4) { animation-delay: 0.3s; }
+    .navOff.navOn li:nth-child(5) { animation-delay: 0.4s; }
+
+    .footerCard ul {
+        text-align: center;
+    }
+
+    header .logo-title img {
+        width: 60px;
+        height: 40px;
+    }
+}
+
+/* --- Celulares Pequenos (ex: < 360px) --- */
+@media (max-width: 320px) {
+    
+
+    header h1 {
+        font-size: 1.1rem;
+    }
+    
+    
+
+
+}

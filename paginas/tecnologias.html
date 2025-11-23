@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceano Conectado</title>
+    <link rel="stylesheet" href="../css/styleBase.css">
+    <link rel="stylesheet" href="../css/styleTecnologia.css">
+    <link rel="shortcut icon" href="../assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html">
+                <div class="logo-title">
+                    <img src="../assets/logo.png" alt="Logo Oceano Conectado">
+                    <h1>Oceano Conectado</h1>
+                </div>
+            </a>
+            <button class="menu-toggler">
+                <img src="../assets/mais.png" alt="Abrir Menu">
+            </button>
+
+            <nav>
+                <ul class="navOff">
+                    <li><a href="../index.html">Início</a></li>
+                    <li></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <div class="header">
+            <h1>Tecnologias</h1>
+            <p>Conheça as tecnologias utilizadas para a conservação dos oceanos</p>
+        </div>
+        <div class="contents">
+            <a href="tec1.html">
+            <div class="content">
+                
+                <img src="../assets/droneBanner.webp" alt="">
+                <h1>Drones Subaquáticos</h1>
+                
+            </div>
+            </a>
+            <a href="tec2.html">
+            <div class="content">
+                <img src="../assets/boiaBanner.jpeg" alt="">
+                <h1>Boias Meteoceanográficas</h1>
+            </div>
+            </a>
+            <a href="tec3.html">
+            <div class="content">
+                <img src="../assets/aerogelBanner.webp" alt="">
+                <h1>Aerogel</h1>
+            </div>
+            </a>
+            <a href="tec4.html">
+            <div class="content">
+                <img src="../assets/coralBanner.webp" alt="">
+                <h1>recifes de coral artificiais</h1>
+            </div>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footerCard">
+                <img src="../assets/IF.png" alt="Logo Instituição">
+                <h1>Informações</h1>
+                <ul>
+                    <li><strong>Desenvolvido por:</strong> João Victor</li>
+                    <li><strong>Idealização e Suporte geral:</strong> Helder Filho</li>
+                    <li><strong>Idealização e Design:</strong> Thalysson</li>
+                    <li><strong>Professores Orientadores:</strong> Luciano Alves, Hiran Nonato, Alessandro de Castro e
+                        Priscyla Kelly</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Oceano Conectado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div class="mode">
+        <button class="btnMode"><img src="../assets/mode.png"></button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- CÓDIGO DO TEMA CLARO/ESCURO (Corrigido e integrado) ---
+            const btnMode = document.querySelector('.btnMode');
+            const body = document.body;
+
+            btnMode.addEventListener('click', () => {
+                // A mágica acontece aqui: Adiciona 'light-mode' se não tiver, e remove se tiver.
+                body.classList.toggle('light-mode');
+            });
+
+            const btnHeader = document.querySelector('.menu-toggler');
+            const navbar = document.querySelector('.navOff');
+
+            btnHeader.addEventListener('click', () => {
+                navbar.classList.toggle('navOn');
+            });
+
+        });  
+    </script>
+</body>
+
+</html>

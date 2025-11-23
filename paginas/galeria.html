@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceano Conectado</title>
+
+    <link rel="stylesheet" href="../css/styleBase.css">
+    <link rel="stylesheet" href="../css/styleGaleria.css">
+
+    <link rel="shortcut icon" href="../assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html">
+                <div class="logo-title">
+                    <img src="../assets/logo.png" alt="Logo Oceano Conectado">
+                    <h1>Oceano Conectado</h1>
+                </div>
+            </a>
+
+            <button class="menu-toggler">
+                <img src="../assets/mais.png" alt="Abrir Menu">
+            </button>
+
+            <nav>
+                <ul class="navOff">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="ImpactosPositivos.html">Impactos Positivos</a></li>
+                    <li><a href="ImpactosNegativos.html">Impactos Negativos</a></li>
+                    <li class="here">Galeria</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="header-galeria">
+            <h1>Galeria do Oceano</h1>
+            <p>Explore as maravilhas ocultas dos mares através de imagens
+                que revelam a vida, a beleza e os mistérios do oceano.
+            </p>
+            <p class="subP">Cada clique é uma nova descoberta.</p>
+        </div>
+
+        <h1>Animais em destaque</h1>
+        <hr>
+        <div class="imagens">
+            <div class="imagem">
+                <button id="btnBaleias">
+                    <img src="../assets/baleia.webp" alt="Baleia">
+                    <h1>Baleias</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnAguaViva">
+                    <img src="../assets/aguaViva.jpg" alt="Água-viva">
+                    <h1>Águas-vivas</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnTartaruga">
+                    <img src="../assets/tartaruga.jpg" alt="Tartaruga">
+                    <h1>Tartarugas</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnPinguim">
+                    <img src="../assets/pinguim.webp" alt="Pinguim">
+                    <h1>Pinguins</h1>
+                </button>
+            </div>
+        </div>
+        <h1>Outros animais</h1>
+        <hr>
+        <div class="imagens">
+            <div class="imagem">
+                <button id="btnTubarao">
+                    <img src="../assets/tubarao.webp" alt="Tubarão">
+                    <h1>Tubarões</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnGolfinho">
+                    <img src="../assets/golfinho.webp" alt="Golfinho">
+                    <h1>Golfinhos</h1>
+                </button>
+            </div>
+
+            <div class="imagem">
+                <button id="btnFocas">
+                    <img src="../assets/foca.jpg" alt="Foca">
+                    <h1>Focas</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnCavalosMarinho">
+                    <img src="../assets/cavaloMarinho.webp" alt="Cavalo-marinho">
+                    <h1>Cavalos-marinhos</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnPolvo">
+                    <img src="../assets/polvo.webp" alt="Polvo">
+                    <h1>Polvos</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnEstrelaDoMar">
+                    <img src="../assets/estrelaDoMar.jpg" alt="Estrela-do-mar">
+                    <h1>Estrelas-do-mar</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnArraias">
+                    <img src="../assets/arraia.jpg" alt="Arraia">
+                    <h1>Arraias</h1>
+                </button>
+            </div>
+            <div class="imagem">
+                <button id="btnCaranguejos">
+                    <img src="../assets/caranguejo.jpg" alt="Caranguejo">
+                    <h1>Caranguejos</h1>
+                </button>
+            </div>
+        </div>
+
+        <div class="panel" id="baleias">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Baleias</h2>
+                    <p>As baleias são mamíferos marinhos essenciais para o equilíbrio dos oceanos,
+                        desempenhando funções importantes como a fertilização das águas e a captura natural
+                        de carbono. Apesar de gigantes e inteligentes, elas enfrentam ameaças como colisões
+                        com navios, poluição sonora, pesca acidental e mudanças climáticas. Para protegê-las,
+                        diversas tecnologias têm sido desenvolvidas. Tags com GPS permitem acompanhar suas rotas
+                        migratórias e padrões de mergulho; drones ajudam a observar seu comportamento sem causar
+                        estresse; sensores acústicos registram suas vocalizações e identificam áreas de risco;
+                        e sistemas de alerta avisam embarcações quando baleias estão próximas, reduzindo acidentes.
+                        A inteligência artificial também analisa dados em larga escala, reconhecendo espécies e
+                        detectando ameaças em tempo real. Juntas, essas inovações ampliam o conhecimento sobre
+                        esses animais e fortalecem sua preservação.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="aguaViva">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Águas-vivas</h2>
+                    <p> As águas-vivas são invertebrados marinhos
+                        essenciais para o equilíbrio dos oceanos, mas podem se multiplicar rapidamente
+                        quando o ambiente está desequilibrado, causando problemas em praias e até em sistemas
+                        de energia. Para estudá-las e controlar seus impactos, diversas tecnologias são usadas:
+                        sensores oceânicos monitoram condições ambientais que favorecem seu crescimento; drones
+                        identificam enxames antes que alcancem áreas costeiras; a inteligência artificial analisa
+                        imagens e prevê riscos; robôs subaquáticos registram seu comportamento sem causar danos;
+                        e barreiras tecnológicas ajudam a proteger regiões turísticas. Essas inovações tornam possível
+                        compreender melhor esse animal e reduzir os prejuízos causados por sua proliferação, preservando
+                        ao mesmo tempo o equilíbrio dos ecossistemas marinhos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="tubarao">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Tubarões</h2>
+                    <p>Os tubarões são predadores de topo essenciais para a manutenção do equilíbrio das cadeias
+                        alimentares oceânicas, regulando as populações de outras espécies e eliminando indivíduos
+                        doentes. Infelizmente, enfrentam declínios populacionais drásticos devido à sobrepesca
+                        industrial, ao "finning" e à degradação de seus habitats naturais. Para monitorá-los, cientistas
+                        utilizam telemetria acústica avançada e tags via satélite que mapeiam suas migrações
+                        transoceânicas em tempo real.Drones aéreos e algoritmos de inteligência artificial são
+                        empregados para a identificação de espécies e contagem populacional não invasiva em áreas
+                        costeiras. Essas tecnologias avançadas são fundamentais para criar áreas marinhas protegidas
+                        mais eficazes e garantir a sobrevivência desses guardiões dos mares.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="golfinho">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Golfinhos</h2>
+                    <p>Os golfinhos são mamíferos marinhos essenciais que atuam como bioindicadores precisos da saúde
+                        dos ecossistemas costeiros e pelágicos. Suas populações são frequentemente ameaçadas pela
+                        captura acidental em redes de pesca, poluição química e interferência sonora subaquática.
+                        Tecnologias como hidrofones para monitoramento acústico passivo permitem aos pesquisadores
+                        estudar sua complexa comunicação e localização sem qualquer interferência humana. Além disso,
+                        softwares de reconhecimento de padrões baseados em IA identificam indivíduos específicos através
+                        das marcas únicas em suas barbatanas dorsais. O uso dessas inovações aprimora as estratégias de
+                        conservação e aprofunda a compreensão das estruturas sociais desses cetáceos.
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="tartaruga">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Tartarugas</h2>
+                    <p>As tartarugas marinhas são animais essenciais para o equilíbrio dos oceanos,
+                        mas estão cada vez mais ameaçadas pela ação humana. Para protegê-las,
+                        diversas tecnologias têm sido desenvolvidas. O rastreamento por GPS permite
+                        acompanhar suas rotas migratórias e áreas de risco, enquanto sensores instalados
+                        nos ninhos monitoram temperatura e segurança dos ovos. Drones e câmeras térmicas
+                        ajudam a localizar ninhos e vigiar praias de forma eficiente, e sistemas de inteligência
+                        artificial analisam imagens e dados para prever ameaças e identificar padrões
+                        importantes para a conservação. Além disso, dispositivos de exclusão em redes
+                        de pesca reduzem mortes acidentais, e tecnologias de iluminação evitam que filhotes
+                        se desorientem ao nascer. Essas inovações ampliam o conhecimento sobre a espécie
+                        e fortalecem sua proteção ao redor do mundo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="pinguim">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Pinguins</h2>
+                    <p>Os pinguins são aves marinhas essenciais para o equilíbrio dos oceanos
+                        e considerados indicadores da saúde ambiental, mas enfrentam ameaças como
+                        o aquecimento global e a pesca industrial. Para ajudar na sua conservação,
+                        diversas tecnologias vêm sendo aplicadas. O rastreamento por GPS e sensores
+                        de mergulho revela rotas migratórias e padrões de alimentação; câmeras
+                        automáticas monitoram colônias sem interferência humana; drones mapeiam populações
+                        em áreas remotas; e a inteligência artificial analisa enormes quantidades de imagens
+                        para detectar colônias e prever riscos. Sensores de temperatura e até imagens de
+                        satélite baseadas em manchas de guano ajudam a entender como o clima afeta cada espécie.
+                        Essas tecnologias permitem estudar e proteger pinguins com precisão cada vez maior,
+                        garantindo melhores estratégias de preservação.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="foca">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Focas</h2>
+                    <p>As focas são carnívoros essenciais que conectam os ambientes marinho e terrestre, desempenhando
+                        um papel crucial na regulação de peixes e invertebrados em latitudes altas e temperadas. As
+                        mudanças climáticas e o rápido derretimento do gelo marinho representam desafios severos para
+                        seus ciclos reprodutivos e períodos de descanso. Pesquisadores empregam sensores de bio-logging
+                        equipados com GPS e acelerômetros acoplados aos animais para registrar comportamentos de
+                        mergulho e alimentação em áreas remotas. Drones com câmeras térmicas também são utilizados para
+                        realizar censos populacionais precisos em colônias de difícil acesso sem causar estresse aos
+                        animais. A integração dessas ferramentas tecnológicas fornece dados vitais para mitigar os
+                        impactos do aquecimento global sobre essas espécies.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="cavaloMarinho">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Cavalos-marinhos</h2>
+                    <p>Os cavalos-marinhos são peixes singulares e essenciais, servindo como indicadores vitais da saúde
+                        de prados de ervas marinhas e ecossistemas de recifes de coral. Eles são altamente vulneráveis à
+                        destruição de habitat, à pesca de arrasto e ao comércio ilegal para o mercado de aquários e
+                        medicina tradicional. Para sua proteção, utiliza-se atualmente software de reconhecimento visual
+                        que identifica indivíduos através de seus padrões únicos de manchas, substituindo a marcação
+                        física invasiva. Veículos Operados Remotamente (ROVs) auxiliam no mapeamento detalhado e na
+                        inspeção de seus habitats bentônicos sensíveis. Essas aplicações tecnológicas permitem um
+                        monitoramento não intrusivo, crucial para a recuperação das populações ameaçadas desta espécie
+                        carismática.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="polvo">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Polvos</h2>
+                    <p>Os polvos são invertebrados marinhos essenciais, conhecidos por sua inteligência avançada e papel
+                        central na transferência de energia na teia alimentar bentônica. A pressão da pesca comercial
+                        desregulada e as alterações na química da água colocam em risco suas populações e a integridade
+                        de seus abrigos. O estudo desses animais é impulsionado por câmeras subaquáticas de alta
+                        resolução com sensores de movimento, capazes de capturar comportamentos complexos em tocas
+                        profundas. A robótica leve (soft robotics) é desenvolvida inspirada em sua fisiologia para
+                        explorar fendas estreitas e interagir delicadamente com o ambiente marinho. Tais inovações
+                        ampliam significativamente o entendimento sobre a etologia e a biologia evolutiva desses
+                        cefalópodes.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="estrelaDoMar">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Estrelas-do-mar</h2>
+                    <p>As estrelas-do-mar são equinodermos essenciais, muitas vezes atuando como espécies-chave que
+                        controlam o crescimento excessivo de mexilhões e algas, mantendo a biodiversidade local. Surtos
+                        de doenças devastadoras e o aquecimento dos oceanos têm causado mortalidade em massa em diversas
+                        regiões, desequilibrando recifes inteiros. Tecnologias de diagnóstico molecular são aplicadas
+                        para detectar patógenos precocemente, enquanto Veículos Submarinos Autônomos (AUVs) monitoram a
+                        saúde dos recifes em larga escala. A fotografia time-lapse in situ permite aos cientistas
+                        observar a dinâmica de predação e regeneração desses organismos ao longo do tempo. A combinação
+                        dessas tecnologias é vital para gerenciar surtos de doenças e preservar a estrutura das
+                        comunidades recifais.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="arraia">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Arraias</h2>
+                    <p>As arraias são peixes cartilaginosos essenciais que revolvem o sedimento do fundo do mar ao se
+                        alimentarem, oxigenando o substrato e controlando presas enterradas. Elas sofrem intensamente
+                        com a captura incidental (bycatch) na pesca industrial e com a degradação de zonas costeiras
+                        rasas usadas como berçários. O uso de ultrassonografia subaquática portátil permite aos
+                        cientistas avaliar a saúde reprodutiva de fêmeas selvagens sem a necessidade de captura ou
+                        remoção da água. Drones aéreos facilitam o rastreamento de grandes agregações em águas claras,
+                        enquanto a telemetria acústica mapeia seus corredores migratórios. Essas ferramentas inovadoras
+                        fornecem a base científica necessária para implementar zonas de exclusão de pesca eficientes.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" id="caranguejo">
+            <div class="panelContent">
+                <div class="background">
+                    <button class="closeBtn" aria-label="Fechar modal">&times;</button>
+                    <h2>Caranguejos</h2>
+                    <p>Os caranguejos são crustáceos essenciais que atuam como detritívoros eficientes e engenheiros do
+                        ecossistema, reciclando nutrientes e aerando o solo dos manguezais e fundos oceânicos. A
+                        acidificação dos oceanos, que enfraquece suas carapaças calcificadas, e a poluição por
+                        microplásticos são ameaças crescentes à sua sobrevivência a longo prazo. Sensores de pH de alta
+                        precisão são instalados em seus habitats para monitorar as flutuações nas condições químicas da
+                        água em tempo real. Micromarcadores eletrônicos e robótica subaquática auxiliam no estudo das
+                        rotas de dispersão de larvas e na migração de espécies de profundidade. O monitoramento
+                        tecnológico constante é indispensável para prever e mitigar os impactos das mudanças climáticas
+                        sobre esses organismos bentônicos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <img src="../assets/inovacao.png" alt="Ícone Inovação">
+                <h3>Impactos Positivos</h3>
+                <p>Descubra como a tecnologia está ajudando a proteger e preservar os oceanos, desde sensores
+                    subaquáticos até sistemas de monitoramento ambiental.</p>
+                <a href="ImpactosPositivos.html">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="../assets/poluicaoSonora.png" alt="Ícone Poluição Sonora">
+                <h3>Impactos Negativos</h3>
+                <p>Explore os desafios que a tecnologia traz para os oceanos, incluindo poluição eletrônica, pesca
+                    excessiva e impactos ambientais causados por atividades humanas.</p>
+                <a href="ImpactosNegativos.html">Saiba Mais</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footerCard">
+                <img src="../assets/IF.png" alt="Logo Instituição">
+                <h1>Informações</h1>
+                <ul>
+                    <li><strong>Desenvolvido por:</strong> João Victor</li>
+                    <li><strong>Idealização e Suporte geral:</strong> Helder Filho</li>
+                    <li><strong>Idealização e Design:</strong> Thalysson</li>
+                    <li><strong>Professores Orientadores:</strong> Luciano Alves, Hiran Nonato, Alessandro de Castro e
+                        Priscyla Kelly</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Oceano Conectado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="mode">
+        <button class="btnMode" aria-label="Mudar tema">
+            <img src="../assets/mode.png" alt="Ícone de tema">
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // --- CÓDIGO DO TEMA CLARO/ESCURO ---
+    const btnMode = document.querySelector('.btnMode');
+    const body = document.body;
+    btnMode.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+    });
+
+    // --- CÓDIGO DO MENU HAMBURGUER ---
+    const btnHeader = document.querySelector('.menu-toggler');
+    const navbar = document.querySelector('.navOff');
+    btnHeader.addEventListener('click', () => {
+        navbar.classList.toggle('navOn');
+    });
+
+    // --- CÓDIGO DOS MODAIS (Paineis) ---
+    const elements = [
+        { button: 'btnBaleias', panel: 'baleias' },
+        { button: 'btnAguaViva', panel: 'aguaViva' },
+        { button: 'btnTubarao', panel: 'tubarao' },
+        { button: 'btnGolfinho', panel: 'golfinho' },
+        { button: 'btnTartaruga', panel: 'tartaruga' },
+        { button: 'btnFocas', panel: 'foca' },
+        { button: 'btnCavalosMarinho', panel: 'cavaloMarinho' },
+        { button: 'btnPolvo', panel: 'polvo' },
+        { button: 'btnEstrelaDoMar', panel: 'estrelaDoMar' },
+        { button: 'btnArraias', panel: 'arraia' },
+        { button: 'btnCaranguejos', panel: 'caranguejo' },
+        { button: 'btnPinguim', panel: 'pinguim' }
+    ];
+
+    elements.forEach(({ button, panel }) => {
+        const btn = document.getElementById(button);
+        const panelElement = document.getElementById(panel);
+        const closeBtn = panelElement.querySelector('.closeBtn');
+        
+        // Função para fechar o painel (para evitar repetição de código)
+        const closePanel = () => {
+            panelElement.classList.remove('panelOn');
+            body.classList.remove('bodyLock');
+        };
+
+        // 1. Abrir o painel
+        btn.addEventListener('click', () => {
+            panelElement.classList.toggle('panelOn');
+            body.classList.toggle('bodyLock');
+        });
+
+        // 2. Fechar pelo botão X
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closePanel);
+        }
+
+        // 3. NOVO: Fechar ao clicar fora (no fundo escuro)
+        panelElement.addEventListener('click', (e) => {
+            // Verifica se o clique foi EXATAMENTE no painel (fundo) 
+            // e não nos elementos filhos (texto, imagem, etc)
+            if (e.target === panelElement) {
+                closePanel();
+            }
+        });
+    });
+});
+    </script>
+</body>
+
+</html>

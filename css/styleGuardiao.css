@@ -1,0 +1,137 @@
+/* --- Configurações Gerais da Página --- */
+.header {
+    background-color: #0A0F1C; /* Fundo do cabeçalho da main */
+    color: white;
+    text-align: center;
+    padding: 40px 20px 50px 20px; /* Padding extra embaixo para a seta */
+    position: relative; /* Necessário para posicionar a seta */
+    z-index: 20; /* Deve ser maior que o da próxima seção */
+}
+
+.header ul {
+    list-style-type: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+/* Cores dos Níveis */
+.lvl1 { color: #FFFF00; }
+.lvl2 { color: #FFA500; }
+.lvl3 { color: #FF0000; }
+
+/* --- Configuração dos Blocos de Informação --- */
+.info {
+    padding: 60px 0px 50px 200px; /* Padding-top maior para compensar a seta de cima */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative; /* Necessário para a seta deste bloco */
+}
+
+.info h2 {
+    margin-top: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.info p {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.info img {
+    width: 200px;
+    height: auto;
+    margin: 0px 200px 0px 0px;
+}
+
+/* --- Cores de Fundo das Seções --- */
+.info0 { background-color: #0A0F1C; }
+.info1 { background-color: #000020; }
+.info2 { background-color: #171a4a; }
+.info3 { background-color: #2f2c79; }
+
+/* --- A MÁGICA DA SETA (DRY - Don't Repeat Yourself) --- */
+
+/* Regra Geral: Todo elemento com classe .header ou .info terá o esqueleto da seta */
+.header::after,
+.info::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza perfeitamente */
+    bottom: -30px; /* Empurra para fora da caixa (mesmo tamanho da borda) */
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    z-index: 10; /* Garante que a seta flutue sobre o elemento de baixo */
+    pointer-events: none; /* A seta não interfere em cliques */
+}
+
+/* Regra Específica: Cores das Setas */
+/* A cor da seta deve ser IGUAL à cor do fundo do elemento PAI */
+
+/* Seta do Header (#0A0F1C) aponta para Info1 */
+.header::after {
+    border-top: 30px solid #0A0F1C;
+}
+
+/* Seta do Info1 (#00425A) aponta para Info2 */
+.info1::after {
+    border-top: 30px solid #000020;
+}
+
+/* Seta do Info2 (#90E0EF) aponta para Info3 */
+.info2::after {
+    border-top: 30px solid #171a4a;
+}
+
+/* Seta do Info3 (#48CAE4) aponta para Info1/Outros */
+.info3::after {
+    border-top: 30px solid #2f2c79;
+}
+
+/* Remove a seta do ÚLTIMO elemento da lista para não apontar para o rodapé */
+.content .info:last-child::after {
+    display: none;
+}
+
+body.light-mode .header{
+    background-color: #ffffff; /* Fundo do cabeçalho da main */
+    color: #0A0F1C;
+}
+
+body.light-mode .header::after {
+    border-top: 30px solid #ffffff;
+}
+
+body.light-mode p {
+    color: #ffffff;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .info {
+        padding: 60px 10px 50px 10px;
+        text-align: center;
+        flex-direction: column;
+        padding-top: 60px;
+    }
+    .info h2 {
+        margin-top: 0;
+        font-size: 2em;
+    }
+
+    .info p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+    /* Inverter ordem imagem/texto no mobile se necessário, ou manter padrão */
+    .info img {
+        width: 120px;
+        order: -1;
+        margin: 0; /* Imagem aparece antes do texto no mobile, opcional */
+    }
+}
