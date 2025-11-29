@@ -312,9 +312,16 @@ body.light-mode .btnMode {
 
 /* ================================== */
 /* MEDIA QUERIES (Responsivo)         */
-/* =l================================= */
+/* ================================== */
 
-/* --- Tablets (ex: < 768px) --- */
+@media (max-width: 1024px) {
+    header .logo-title img {
+    width: 10dvw;
+    height: 9dvh;
+    margin-bottom: 20px;
+}
+}
+
 @media (max-width: 768px) {
     main {
     padding-top: 80px;
@@ -381,6 +388,7 @@ body.light-mode .btnMode {
     .navOff.navOn li:nth-child(3) { animation-delay: 0.2s; }
     .navOff.navOn li:nth-child(4) { animation-delay: 0.3s; }
     .navOff.navOn li:nth-child(5) { animation-delay: 0.4s; }
+    .navOff.navOn li:nth-child(6) { animation-delay: 0.5s; }
 
     .footerCard ul {
         text-align: center;

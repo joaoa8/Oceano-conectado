@@ -108,7 +108,11 @@ body.light-mode .header::after {
 }
 
 body.light-mode p {
-    color: #ffffff;
+    color: #E5E5E5;
+}
+
+body.light-mode footer p {
+    color: #495057;
 }
 
 /* --- Responsividade --- */
