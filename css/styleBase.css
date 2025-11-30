@@ -22,6 +22,11 @@
     box-sizing: border-box;
 }
 
+/* Previne scroll horizontal causado por elementos que ultrapassam a largura */
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 0;
@@ -29,6 +34,7 @@ body {
     color: #E5E5E5;
     /* Transição suave para o modo light/dark */
     transition: background-color 0.3s ease, color 0.5s ease;
+    width: 100%;
 }
 
 main {
@@ -167,7 +173,7 @@ header .here {
     transition: color 0.3s ease;
 }
 
-.card a {
+.link {
     text-decoration: underline;
     color: #00B4D8;
     cursor: pointer;
@@ -175,11 +181,9 @@ header .here {
     font-weight: bold; /* Damos mais destaque */
 }
 
-.card a:hover {
+.link:hover {
     color: #013A63;
 }
-
-
 
 /* --- FOOTER (Componente Reutilizável) --- */
 footer {
@@ -220,6 +224,17 @@ footer {
     text-align: left; /* Fica mais alinhado */
 }
 
+.footer a{
+    text-decoration: underline;
+    color: #00B4D8;
+    cursor: pointer;
+    transition: color 0.5s;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #013A63;
+}
 .footer-bottom {
     padding: 20px 5%;
     border-top: 1px solid #1a2f5f; /* Divisão sutil */
@@ -288,11 +303,11 @@ body.light-mode .card p {
     color: #6c757d;
 }
 
-body.light-mode .card a {
+body.light-mode .link {
     color: #0077b6;
 }
 
-body.light-mode .card a:hover {
+body.light-mode .link:hover {
     color: #005f8a;
 }
 
@@ -380,7 +395,7 @@ body.light-mode .btnMode {
         animation: slideIn 0.5s ease-out forwards;
         text-align: left;
         padding: 6px 0;
-        line-height: 1px;
+        line-height: normal; /* antes estava 1px — isso pode causar renderização estranha */
     }
 
     .navOff.navOn li:nth-child(1) { animation-delay: 0s; }
@@ -402,13 +417,21 @@ body.light-mode .btnMode {
 
 /* --- Celulares Pequenos (ex: < 360px) --- */
 @media (max-width: 320px) {
-    
-
     header h1 {
         font-size: 1.1rem;
     }
-    
-    
+}
 
+/* Garantir que mídias não ultrapassem a largura do container */
+img, picture, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
+/* Quebra palavras/URLs longas para não expandirem a largura */
+p, li, .content, .contents {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
 }
