@@ -164,6 +164,10 @@
     margin-bottom: 5px;
 }
 
+.cards a{
+    text-decoration: none;
+}
+
 h3{
     margin: 0px;
 }
